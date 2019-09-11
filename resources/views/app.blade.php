@@ -11,18 +11,18 @@
     </head>
     <body class="font-sans">
         <div id="app">
-            <div class="container mx-auto">
+            <div class="container px-8">
 
                 <header class="py-6">
                     <h1>Marcs</h1>
                 </header>
 
                 <main class="flex">
-                    <aside class="w-1/5">
+                    <aside class="w-1/5 pt-10">
                         <section class="mb-8">
                             <h5 class="uppercase font-bold mb-3">Main</h5>
                             <ul class="list-reset">
-                                <li class="text-sm leading-loose"><router-link to="/">Home</router-link></li>
+                                <li class="text-sm leading-loose"><router-link to="/" exact>Home</router-link></li>
                                 <li class="text-sm leading-loose"><router-link to="/posts">Posts</router-link></li>
                                 <li class="text-sm leading-loose"><router-link to="/projects">Projects</router-link></li>
                                 <li class="text-sm leading-loose"><router-link to="/contact">Contact</router-link></li>
