@@ -3,9 +3,11 @@
         <h1 class="font-normal text-3xl text-gray-900 leading-none">
             Posts
         </h1>
-        <p>
-            {{ name }}
-        </p>
+        <ul id="example-1">
+            <li v-for="post in posts" :key="post.id">
+                {{ post.name }}
+            </li>
+        </ul>
     </div>
 
 </template>
@@ -15,14 +17,14 @@ export default {
     
     data() {
         return {
-            name : ''
+            posts : []
         }
     },
 
     created() {
         axios.get('api/posts').then( response => {
             let { data } = response;
-            this.name = data.name;
+            this.posts = data;
         });
     }
 

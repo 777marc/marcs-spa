@@ -20,8 +20,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('posts', function () {
     return [
-        'id' => 1,
-        'name' => 'my first post',
-        'desription' => 'yada yada'
+        [
+            'id' => 1,
+            'name' => 'my first post',
+            'desription' => 'yada yada'
+        ],
+        [
+            'id' => 2,
+            'name' => 'my 2nd post',
+            'desription' => 'yada yada'
+        ]        
     ];
 });

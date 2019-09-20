@@ -1968,10 +1968,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: ''
+      posts: []
     };
   },
   created: function created() {
@@ -1979,7 +1981,7 @@ __webpack_require__.r(__webpack_exports__);
 
     axios.get('api/posts').then(function (response) {
       var data = response.data;
-      _this.name = data.name;
+      _this.posts = data;
     });
   }
 });
@@ -19751,7 +19753,16 @@ var render = function() {
       [_vm._v("\n        Posts\n    ")]
     ),
     _vm._v(" "),
-    _c("p", [_vm._v("\n        " + _vm._s(_vm.name) + "\n    ")])
+    _c(
+      "ul",
+      { attrs: { id: "example-1" } },
+      _vm._l(_vm.posts, function(post) {
+        return _c("li", { key: post.id }, [
+          _vm._v("\n            " + _vm._s(post.name) + "\n        ")
+        ])
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = []
